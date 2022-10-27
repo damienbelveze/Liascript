@@ -1,6 +1,6 @@
 
 <!--
-narrator: French Male
+narrator: UK English Female
 -->
 
 --{{1 French Male}}--
@@ -17,21 +17,3 @@ let input = "@input".trim().toLowerCase()
 
 input == "blanc" || input == "blanche"
 </script>
-
-deuxième
-
-What is $37 + 15$?
-
-    [[52]]
-    [[?]] the solution is larger than 50
-    [[?]] it is less than 55
-    [[?]] it should be an even number
-
-This is also a valid quiz ...
-
-[[52]]
-- [[?]] the solution is larger than 50
-- [[?]] it is less than 55
-- [[?]] it should be an even number
-
-
