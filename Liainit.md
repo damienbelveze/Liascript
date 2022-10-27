@@ -5,9 +5,9 @@ email:    your@mail.org
 
 version:  0.0.1
 
-language: en
+language: fr
 
-narrator: US English Female
+narrator: French Female
 
 comment:  Try to write a short comment about
           your course, multiline is also okay.
@@ -54,7 +54,7 @@ Images:
 ### Extensions
 
      --{{0}}--
-But you can also include other features such as spoken text.
+un chasseur sachant chasser
 
       --{{1}}--
 Insert any kind of audio file:
