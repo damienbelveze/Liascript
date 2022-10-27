@@ -1,9 +1,9 @@
 
 <!--
-narrator: UK English Female
+narrator: French Male
 -->
 
---{{1 French Male}}--
+--{{1}}--
 
 # voix 
 
@@ -11,16 +11,4 @@ Il y avait déjà bien des années que, de Combray, tout ce qui n’était pas l
 
 quelle est la couleur du cheval blanc d'Henri IV
 
---{{2}}--
-
-[[blanc]]
-<script>
-let input = "@input".trim().toLowerCase()
-
-input == "blanc" || input == "blanche"
-</script>
-
---{{3}}--
-
-!?[The eLab-Project on YouTube][def]<!-- _ width="560px" height="315px" -->
 
