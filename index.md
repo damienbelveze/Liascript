@@ -15,10 +15,5 @@ Quelles villes sont des capitales ?
 
 # chapitre 3
 
-[[solution]]
-<script>
-  // @input will be replace by the user input
-  let input_string = "@input";
-  "solution" == input_string.trim().toLowerCase();
-</script>
+Ecouter [Proust](proust.md)
 
