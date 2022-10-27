@@ -1,9 +1,11 @@
 
 <!--
+language: fr 
 narrator: French Male
 -->
 
---{{1 French Male}}--
+
+{{1}}
 
 # voix 
 
@@ -11,7 +13,7 @@ Il y avait déjà bien des années que, de Combray, tout ce qui n’était pas l
 
 quelle est la couleur du cheval blanc d'Henri IV
 
---{{2 French Female}}--
+{{2}}
 
 un chasseur sachant chasser 
 
