@@ -73,3 +73,28 @@ Je suis un volcan quelque part dans le monde
 
 This text is spoken by a female. 
 
+| colonne 1 | colonne 2 | colonne 3 |
+|:--:|:--:|:--:|
+|a|b|c|
+
+<!--bloc de code-->
+
+```abap
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
+
+<!--note de bas de page-->
+
+[^1](ceci est une note de bas de page)
+
+<!--ajout d'un extrait sonore-->
+
+?[alt-text](https://soundcloud.com/belvezedamien/extrait-du-film-de-celine-emmanuel-bourdieu?si=eff1e64a51d445c99c86ce77f8e643d7&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing "extrait du film Céline")
+
+              --{{1 UK English Female}}--
+Enter some **text** that gets read out aloud with another voice.
+Only paragraphs are allowed!'
+
+
+
