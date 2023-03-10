@@ -3,7 +3,7 @@ title: premier cours
 
 author: Damien Belvèze
 
-narrator: US English Female
+narrator: French Female
 
 date: 5/03/2023
 
