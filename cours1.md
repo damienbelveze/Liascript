@@ -92,7 +92,7 @@ alert(s);
 
 ?[alt-text](https://soundcloud.com/belvezedamien/extrait-du-film-de-celine-emmanuel-bourdieu?si=eff1e64a51d445c99c86ce77f8e643d7&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing "extrait du film Céline")
 
-              --{{1 UK French Female}}--
+              --{{1 French Female}}--
 Salut, tu vas bien ?'
 
 
