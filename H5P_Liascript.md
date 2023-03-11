@@ -60,4 +60,167 @@ Exporter votre quiz en HTML et envoyez-le sous ce format dans [ce répertoire](h
 
 ## Introduction à LiaScript
 
+LiaScript est un logiciel qui s'inscrit dans le mouvement des OER (*Open Educational Resources*), ou REL (*Ressources éducatives Libres*) en français. 
+
+![Ressources Educatives Libres](images/REL.png)
+
+L'idée est de permettre à n'importe qui de créer un cours en ligne partageable seulement avec un éditeur de texte et un navigateur. Liascript interprête le texte pour qu'il s'affiche sous la forme de cours interactif dans le navigateur de la personne qui le consulte. 
+
+LiaScript a été présenté par André Dietrich en [novembre 2019 à la conférence ELM Europe](https://youtu.be/w_CRABsJNKA), à la fois comme une alternative valable à Moodle et un outil complémentaire (et compatible avec les principaux LMS dont Moodle)
+
+### Editer un texte pour l'interpréteur Liascript
+
+              --{{2 @Jonas}}--
+LiaScript interprête des textes en Markdown. La syntaxe de base de Markdown est très rapide à maîtriser.
+Cet interpréteur a été pensé au départ pour des cours en informatique, il est donc possible d'exécuter du code à travers LiaScript. 
+
+```javascript
+var s = "Hello ";
+alert(s)
+s + "world";
+```
+<script>@input</script>
+
+### Editer avec Visual Studio Code
+
+Liascript est compatible originellement avec Atom et VS Code. Il a été ensuite adapté avec l'éditeur en ligne CodIMD [^3].
+
+Télécharger Visual Studio Code si ce n'est pas déjà fait. 
+
+Il faut ajouter deux extensions à VS Code : 
+
+- LiaScript-preview
+
+- Liascript-Snippet
+
+Lorsqu'on a téléchargé LiaScript, il reste à modifier un paramétrage qui permettra d'activer l'extension LiaScript-Snippet
+
+Dans VS Code faire la combinaison de touches "Ctrl-Shift-P" et entrer settings.
+Dans le menu sélectionner **Préférences:Open user settings.json**
+
+Ajouter au fichier le code suivant : 
+
+````javascript
+   "[markdown]": {
+      "editor.tabCompletion": "on",
+      "editor.quickSuggestions": true,
+      "editor.snippetSuggestions": "top"
+   },
+````
+Dès lors que ces extensions sont chargées et paramétrées, les menus lias devraient être accessibles
+
+![](images/menu_lia.png)
+
+
+### Editer en ligne 
+
+Si pour tester la solution, vous reculez devant le fait de télécharger et de paramétrer un outil que vous ne connaissez pas, vous pouvez utiliser l'éditeur en [ligne de LiaScript](https://liascript.github.io/LiveEditor/)
+Cliquer sur *New note*
+
+### Commencer un cours sur LiaScript 
+
+Pour être parsé correctement, un texte conçu pour LiaScript doit commencer par un titre 1, soit en markdown, un \# suivi d'une espace et du titre du cours. 
+
+Avant ce titre 1, vous pouvez ajouter des métadonnées afin de décrire votre ressource ou d'orienter le traitement des informations. 
+Cela se fait sous la forme d'un commentaire initial 
+
+````html
+<!-- 
+commentaire 1
+commentaire 2 
+-->
+````
+
+### Créer des quiz avec LiaScript 
+
+#### Questions à choix multiples
+
+Pour créer un QCM, sélectionner Lia-quiz-multiple-choice :
+
+Lesquels de ces volcans se trouvent en Amérique ?
+
+\[[ ]] Stromboli  
+
+\[[X]] Paricutin
+
+\[[ ]] Erebus 
+
+\[[X]] Cotopaxi 
+
+(les bonnes réponses sont cochées)
+
+cela donne :
+
+[[ ]] Stromboli
+[[X]] Paricutin
+[[ ]] Erebus
+[[X]] Cotopaxi
+
+Pour ajouter des indices
+
+\[[ ]] Stromboli
+
+\[[X]] Paricutin
+
+\[[ ]] Erebus
+
+\[[X]] Cotopaxi
+
+\[[?]] Cotopaxi signifie "le cou de la lune" en quechua
+
+\[[?]] Stromboli est un film italien
+
+
+[[ ]] Stromboli
+[[X]] Paricutin
+[[ ]] Erebus
+[[X]] Cotopaxi
+[[?]] Cotopaxi signifie "le cou de la lune" en quechua
+[[?]] Stromboli est un film italien
+
+[^3]: CodIMD permet de rédiger du texte en markdown en mode collaboratif. le CNRS a ouvert une instance à tous les établissements universitaires de France : https://codimd.math.cnrs.fr/
+
+
+\[[ ]] Stromboli
+
+\[[X]] Paricutin
+
+\[[ ]] Erebus
+
+\[[X]] Cotopaxi
+
+\[[?]] Cotopaxi signifie "le cou de la lune" en quechua
+
+\[[?]] Stromboli est un film italien
+
+\****************************************
+
+Le Paricutin est l'un des volcans les plus récemment apparus sur Terre, il est né au Mexique en 1943
+Le volcan Cotopaxi se trouve en Equateur.
+
+\****************************************
+
+cela donne une fois interprété (parsé)
+
+[[ ]] Stromboli
+[[X]] Paricutin
+[[ ]] Erebus
+[[X]] Cotopaxi
+[[?]] Cotopaxi signifie "le cou de la lune" en quechua
+[[?]] Stromboli est un film italien
+****************************************
+
+- Le Paricutin est l'un des volcans les plus récemment apparus sur Terre, il est né au Mexique en 1943
+- Le volcan Cotopaxi se trouve en Equateur.
+
+****************************************
+
+#### textes à trous
+
+En 1610, rue de la Ferronnerie, un homme a poignardé à mort le roi Henri IV, quel était le nom de l'assassin ? 
+
+[[Ravaillac]]
+
+
+
 
