@@ -11,11 +11,50 @@ language: fr
 
 comment: ce support a été présenté dans le cadre du Stretching Numérique (https://stretchingnumerique.fr) le 17 mars 2023
 
+script:   https://unpkg.com/mermaid@9.1.1/dist/mermaid.min.js
+
+@mermaid
+<script run-once="true" modify="false">
+mermaid.initialize({});
+
+var svg = mermaid.render('io9wuwzxt',`@0`.replace(/\\n/g, "\n"),
+function(g) {
+    return true;
+})
+
+"HTML: " + svg
+</script>
+@end
+
+
+@mermaid_eval
+<script>
+mermaid.initialize({});
+var graphDefinition = `@input`
+var cb = function(svgGraph) {
+    return true;
+}
+
+var svg = mermaid.render('io9wuwzxt',graphDefinition,cb)
+console.html(svg)
+"LIA: stop"
+</script>
+@end
+
+@red: <b style="color: red"> @0</b>
+
 -->
 
 # Stretching Numérique : H5P et Liascript
 
 [![course badge](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://LiaScript.github.io/course/?https://raw.githubusercontent.com/damienbelveze/Liascript/main/H5P_Liascript.md#1)
+
+
+*17 mars 2023*
+
+CC:by Damien Belvèze
+
+![](images/logo_SN.png)<!--width="30%"-->
 
 ## 1. Introduction au H5P 
 
@@ -23,7 +62,7 @@ comment: ce support a été présenté dans le cadre du Stretching Numérique (h
 
 
               --{{1 @Jonas}}--
-H5P (HTML-5 Package) est un logiciel libre basé sur HTML5 et JavaScript développé depuis 2014
+H5P (HTML-5 Package) est un @red(logiciel libre basé sur HTML5 et JavaScript) développé depuis 2014
 
 On peut éditer des activités avec H5P au moyen d'éditeurs téléchargeables ou bien à partir de Moodle (si le plugin pour H5P a bien été implémenté par votre gestionnaire Moodle)
 
@@ -34,12 +73,11 @@ Dans le cadre de cet atelier, nous vous proposons d'utiliser l'éditeur **Logiqu
 - télécharger le logiciel et l'ouvrir
 - observer la palette des activités H5P disponible
 
-![console de Logiquiz](images/logiquiz1.PNG)
+![console de Logiquiz](images/logiquiz1.PNG)<!--width="80%"-->
 
 Toutes les activités H5P peuvent être exportées en format H5P ou en format HTML.
 
 Le H5P, que ce soit à travers Moodle ou en dehors ne permet pas de collecter des **traces d'apprentissage**[^2]
-
 
 [^1]:téléchargeable sans droit d'administrateur sur le poste. 
 [^2]: Dans Moodle, pour collecter des traces d'apprentissage, il faut plutôt utiliser des activités 
@@ -62,13 +100,22 @@ Exporter votre quiz en HTML et envoyez-le sous ce format dans [ce répertoire](h
 
 ### 2.1 LiaScript, un projet qui s'insère dans le mouvement des Ressources Educatives Libres (REL)
 
-LiaScript est un logiciel qui s'inscrit dans le mouvement des OER (*Open Educational Resources*), ou REL (*Ressources éducatives Libres*) en français. 
+LiaScript est un @red(logiciel libre qui s'inscrit dans le mouvement des OER) (*Open Educational Resources*), ou REL (*Ressources éducatives Libres*) en français. Liascript compile un texte en markdown directement dans le navigateur de la personne qui le lit. 
 
 ![Ressources Educatives Libres](images/REL.png)
 
-L'idée est de permettre à n'importe qui de créer un cours en ligne partageable seulement avec un éditeur de texte et un navigateur. Liascript interprête le texte pour qu'il s'affiche sous la forme de cours interactif dans le navigateur de la personne qui le consulte. 
+              --{{2 @Jonas}}--
+L'idée est de permettre à n'importe qui de créer *un cours en ligne partageable seulement avec un éditeur de texte et un navigateur*. 
+Liascript interprête le texte pour qu'il s'affiche sous la forme de cours interactif dans le navigateur de la personne qui le consulte. Le cours peut-être aisément téléchargé et modifié par tous. Il n'est pas nécessaire pour écrire et mettre à jour un support de formation réalisé avec Liascript d'utiliser d'autres outls que le compilateur LiaScript, il n'est pas nécessaire non plus d'intervenir sur un serveur. 
 
+              --{{3 @Jonas}}--
+A partir d'un support unique, Liascript permet différents types de présentation : diaporama, ouvrage, texte vocalisé.
 LiaScript a été présenté par André Dietrich en [novembre 2019 à la conférence ELM Europe](https://youtu.be/w_CRABsJNKA), à la fois comme une alternative valable à Moodle et un outil complémentaire (et compatible avec les principaux LMS dont Moodle)
+
+Le texte de la conférence est disponible en ligne [^3]
+
+
+
 
 ### 2.2 Editer un texte pour l'interpréteur Liascript
 
@@ -118,8 +165,9 @@ Veiller à ce que Liascript identifie bien votre espace de travail : dans la col
 
 **pour afficher la vue de votre texte interprété par LiaScript, faites la combinaison de touches ALT + L**
 
-A partir de là, chaque fois que vous sauvegarderez votre texte (CTRL + S), la vue LiaScript devrait se mettre à jour automatiquement. Sinon, vous pouvez pousser la mise à jour en refaisant ALT + L
+A partir de là, chaque fois que vous sauvegarderez votre texte (CTRL + S), la vue LiaScript devrait se mettre à jour automatiquement. Sinon, vous pouvez pousser la mise à jour en refaisant @red(ALT + L)
 
+[^3]: Le texte de la conférence est disponible en ligne :  A. Dietrich, « LIASCRIPT: A DOMAIN-SPECIFIC-LANGUAGE FOR INTERACTIVE ONLINE COURSES », in Proceedings of the International Conference on e-Learning 2019, juill. 2019, p. 186‑194. doi: 10.33965/el2019_201909F024.
 
 ### 2.4 Utiliser l'éditeur en ligne de LiaScript  
 
@@ -230,7 +278,21 @@ En 1610, rue de la Ferronnerie, un homme a poignardé à mort le roi Henri IV, q
 
 [[Ravaillac]]
 
-### 2.7 Partager un cours édité avec Liascript 
+### 2.7 Intégrer d'autres langages dans Liascript 
+
+```text
+gantt
+section Section
+Completed :done,    des1, 2014-01-06,2014-01-08
+Active        :active,  des2, 2014-01-07, 3d
+Parallel 1   :         des3, after des1, 1d
+Parallel 2   :         des4, after des1, 1d
+Parallel 3   :         des5, after des3, 1d
+Parallel 4   :         des6, after des4, 1d
+```
+@mermaid_eval
+
+### 2.8 Partager un cours édité avec Liascript 
 
 Lorsqu'on a rédigé un cours sur son éditeur de texte, on peut ensuite l'envoyer sur Github pour le rendre disponible. 
 
@@ -248,7 +310,7 @@ Pour générer ce bouton, placer le code ci-dessous immédiatement après le tit
 ````markdown
 [![course badge](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://LiaScript.github.io/course/?URL_du_cours)
 `````
-### 2.8 Importer un cours Liascript dans Moodle 
+### 2.9 Importer un cours Liascript dans Moodle 
 
 Cette opération peut se faire avec d'autres LMS (Canvas...), nous allons nous intéresser ici uniquement au cas de Moodle. 
 
@@ -260,7 +322,7 @@ Une fois installé ce programme, on peut réaliser l'import du cours dans Moodle
 
 !?[](https://youtu.be/yk4uEqoKcpw)
 
-### 2.9 Utiliser Liascript au cours d'une séance en synchrone. 
+### 2.10 Utiliser Liascript au cours d'une séance en synchrone. 
 
 On peut utiliser des activités rédigées avec Liascript lors d'un cours avec des apprenants connectés. 
 A une question donnée, on pourra voir dans quelles proportions la classe choisit l'une ou l'autre des réponses proposées.
@@ -275,3 +337,5 @@ Sous le QRcode s'affiche le nombre de personnes actuellement connectées.
 A partir de ce moment, chaque fois qu'un participant clique sur le bouton "check" (pour afficher la réponse), il verra s'afficher les réponses données par les autres apprenants à cette même question. 
 
 ![](images/classroom.PNG)
+
+
