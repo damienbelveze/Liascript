@@ -47,7 +47,7 @@ console.html(svg)
 
 # Utiliser LiasScript pour rédiger des ressources éducatives libres
 
-
+![![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/damienbelveze/Liascript/main/Liascript.md#1)
 
 *26 mars 2025*
 
