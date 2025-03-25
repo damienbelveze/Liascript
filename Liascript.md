@@ -1,15 +1,15 @@
 
 <!--
 
-title: H5P et LiaScript, écrire des ressources éducatives libres
+title: "Ecrire des ressources éducatives libres avec LiaScript"
 
-email: damien.belveze@univ-rennes1.fr 
+email: damien.belveze@univ-rennes.fr 
 
 language: fr 
 
 @Jonas: French Male
 
-comment: ce support a été présenté dans le cadre du Stretching Numérique (https://stretchingnumerique.fr) le 17 mars 2023
+comment: ce support a été présenté dans le cadre du Stretching Numérique le 26 mars 2025
 
 script:   https://unpkg.com/mermaid@9.1.1/dist/mermaid.min.js
 
@@ -45,60 +45,20 @@ console.html(svg)
 
 -->
 
-# Stretching Numérique : H5P et Liascript
-
-[![course badge](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://LiaScript.github.io/course/?https://raw.githubusercontent.com/damienbelveze/Liascript/main/H5P_Liascript.md#1)
+# Utiliser LiasScript pour rédiger des ressources éducatives libres
 
 
-*17 mars 2023*
 
-CC:by Damien Belvèze
+*26 mars 2025*
+
+CC:by 4.0 Damien Belvèze
 
 ![](images/logo_SN.png)<!--width="30%"-->
 
-## 1. Introduction au H5P 
 
-### 1.2 brève présentation de Logiquiz, éditeur d'activité en H5P 
+## 1. Introduction à LiaScript
 
-
-              --{{1 @Jonas}}--
-H5P (HTML-5 Package) est un @red(logiciel libre basé sur HTML5 et JavaScript) développé depuis 2014
-
-On peut éditer des activités avec H5P au moyen d'éditeurs téléchargeables ou bien à partir de Moodle (si le plugin pour H5P a bien été implémenté par votre gestionnaire Moodle)
-
-Dans le cadre de cet atelier, nous vous proposons d'utiliser l'éditeur **Logiquiz** publié par le collectif La Digitale [^1]
-
-[lien de téléchargement de Logiquiz](https://ladigitale.dev/logiquiz/)
-
-- télécharger le logiciel et l'ouvrir
-- observer la palette des activités H5P disponible
-
-![console de Logiquiz](images/logiquiz1.PNG)<!--width="80%"-->
-
-Toutes les activités H5P peuvent être exportées en format H5P ou en format HTML.
-
-Le H5P, que ce soit à travers Moodle ou en dehors ne permet pas de collecter des **traces d'apprentissage**[^2]
-
-[^1]:téléchargeable sans droit d'administrateur sur le poste. 
-[^2]: Dans Moodle, pour collecter des traces d'apprentissage, il faut plutôt utiliser des activités 
-comme les **tests**
-
-**H5P apporte de l'interactivité, mais pas du suivi d'étudiant.**
-
-### 1.3 création d'un quiz avec H5P 
-
-on va se limiter à des choses simples. 
-Essayez de créer une question à choix multiple avec H5P
-
-Exporter votre quiz en HTML et envoyez-le sous ce format dans [ce répertoire](https://uniren1-my.sharepoint.com/:f:/g/personal/damien_belveze_univ-rennes1_fr/EnxZV03hOENMi_mfQ8MkYLEB-YEjUczleP13rsgAYYGAoQ?e=Rsny3P)
-
-### 1.4 Charger un quiz dans Moodle 
-
-!?[charge un quiz dans Moodle](images/video.mp4)
-
-## 2. Introduction à LiaScript
-
-### 2.1 LiaScript, un projet qui s'insère dans le mouvement des Ressources Educatives Libres (REL)
+### 1.1 LiaScript, un projet qui s'insère dans le mouvement des Ressources Educatives Libres (REL)
 
 LiaScript est un @red(logiciel libre qui s'inscrit dans le mouvement des OER) (*Open Educational Resources*), ou REL (*Ressources éducatives Libres*) en français. Liascript compile un texte en markdown directement dans le navigateur de la personne qui le lit. 
 
@@ -117,7 +77,7 @@ Le texte de la conférence est disponible en ligne [^3]
 
 
 
-### 2.2 Editer un texte pour l'interpréteur Liascript
+### 1.2 Editer un texte pour l'interpréteur Liascript
 
               --{{2 @Jonas}}--
 LiaScript interprête des textes en Markdown. La syntaxe de base de Markdown est très rapide à maîtriser.
@@ -130,7 +90,24 @@ s + "world";
 ```
 <script>@input</script>
 
-### 2.3 Editer avec Visual Studio Code
+
+
+# 2. Où éditer en LiaScript ? 
+
+- éditeur en local : VSCode, VScode web (pas encore dispo pour Codium, version libre de VSCode)
+- [éditeur en ligne](https://liascript.github.io/LiveEditor) (ressemble à codIMD) : 
+
+
+### 2.1 Utiliser l'éditeur en ligne de LiaScript  
+
+Si pour tester la solution, vous reculez devant le fait de télécharger et de paramétrer un outil que vous ne connaissez pas, vous pouvez utiliser l'éditeur en [ligne de LiaScript](https://liascript.github.io/LiveEditor/)
+Cliquer sur *New note*
+
+[Démonstration avec des exemples](https://gist.github.com/damienbelveze/0468f5e90b11d95b11f89862b34a6dfa)
+
+
+### 2.2 Editer avec VSCode 
+
 
 Liascript est compatible originellement avec Atom et VS Code. Il a été ensuite adapté avec l'éditeur en ligne CodIMD [^3].
 
@@ -169,12 +146,7 @@ A partir de là, chaque fois que vous sauvegarderez votre texte (CTRL + S), la v
 
 [^3]: Le texte de la conférence est disponible en ligne :  A. Dietrich, « LIASCRIPT: A DOMAIN-SPECIFIC-LANGUAGE FOR INTERACTIVE ONLINE COURSES », in Proceedings of the International Conference on e-Learning 2019, juill. 2019, p. 186‑194. doi: 10.33965/el2019_201909F024.
 
-### 2.4 Utiliser l'éditeur en ligne de LiaScript  
-
-Si pour tester la solution, vous reculez devant le fait de télécharger et de paramétrer un outil que vous ne connaissez pas, vous pouvez utiliser l'éditeur en [ligne de LiaScript](https://liascript.github.io/LiveEditor/)
-Cliquer sur *New note*
-
-### 2.5 Commencer un cours  
+### 2.3 Commencer un cours  
 
 Pour être parsé correctement, un texte conçu pour LiaScript doit commencer par un titre 1, soit en markdown, un \# suivi d'une espace et du titre du cours. 
 
@@ -188,9 +160,9 @@ commentaire 2
 -->
 ````
 
-### 2.6 Créer des quiz avec LiaScript 
+### 2.4 Créer des quiz avec LiaScript 
 
-#### 2.6.1 Questions à choix multiples
+#### 2.4.1 Questions à choix multiples
 
 Pour créer un QCM, sélectionner Lia-quiz-multiple-choice :
 
@@ -272,13 +244,13 @@ cela donne une fois interprété (parsé)
 
 ****************************************
 
-#### 2.6.2 textes à trous
+#### 2.4.2 textes à trous
 
 En 1610, rue de la Ferronnerie, un homme a poignardé à mort le roi Henri IV, quel était le nom de l'assassin ? 
 
 [[Ravaillac]]
 
-### 2.7 Intégrer d'autres langages dans Liascript 
+### 2.5 Intégrer d'autres langages dans Liascript 
 
 ```text
 gantt
@@ -292,7 +264,7 @@ Parallel 4   :         des6, after des4, 1d
 ```
 @mermaid_eval
 
-### 2.8 Partager un cours édité avec Liascript 
+## 3. Partager un cours édité avec Liascript 
 
 Lorsqu'on a rédigé un cours sur son éditeur de texte, on peut ensuite l'envoyer sur Github pour le rendre disponible. 
 
@@ -310,7 +282,7 @@ Pour générer ce bouton, placer le code ci-dessous immédiatement après le tit
 ````markdown
 [![course badge](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://LiaScript.github.io/course/?URL_du_cours)
 `````
-### 2.9 Importer un cours Liascript dans Moodle 
+### 3.1 Importer un cours Liascript dans Moodle 
 
 Cette opération peut se faire avec d'autres LMS (Canvas...), nous allons nous intéresser ici uniquement au cas de Moodle. 
 
@@ -322,7 +294,7 @@ Une fois installé ce programme, on peut réaliser l'import du cours dans Moodle
 
 !?[](https://youtu.be/yk4uEqoKcpw)
 
-### 2.10 Utiliser Liascript au cours d'une séance en synchrone. 
+### 3.2 Utiliser Liascript au cours d'une séance en synchrone. 
 
 On peut utiliser des activités rédigées avec Liascript lors d'un cours avec des apprenants connectés. 
 A une question donnée, on pourra voir dans quelles proportions la classe choisit l'une ou l'autre des réponses proposées.
@@ -337,5 +309,4 @@ Sous le QRcode s'affiche le nombre de personnes actuellement connectées.
 A partir de ce moment, chaque fois qu'un participant clique sur le bouton "check" (pour afficher la réponse), il verra s'afficher les réponses données par les autres apprenants à cette même question. 
 
 ![](images/classroom.PNG)
-
 
