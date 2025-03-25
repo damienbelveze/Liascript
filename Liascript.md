@@ -41,6 +41,13 @@ console.html(svg)
 </script>
 @end
 
+import: https://raw.githubusercontent.com/LiaTemplates/citations/main/README.md
+
+@onload
+// this shall load an entire file at starttime that can be referenced
+setTimeout(() => { window.bibliographyLoad("https://raw.githubusercontent.com/LiaTemplates/citations/main/bibtex.bib")}, 100)
+@end
+
 @red: <b style="color: red"> @0</b>
 
 -->
@@ -60,7 +67,7 @@ CC:by 4.0 Damien Belvèze
 
 ### 1.1 LiaScript, un projet qui s'insère dans le mouvement des Ressources Educatives Libres (REL)
 
-LiaScript est un @red(logiciel libre qui s'inscrit dans le mouvement des OER) (*Open Educational Resources*), ou REL (*Ressources éducatives Libres*) en français. Liascript compile un texte en markdown directement dans le navigateur de la personne qui le lit. 
+LiaScript est un @red(logiciel libre qui s'inscrit dans le mouvement des OER) (*Open Educational Resources*), ou REL (*Ressources éducatives Libres*) en français. Liascript interprête un texte en markdown directement dans le navigateur de la personne qui le lit. 
 
 ![Ressources Educatives Libres](images/REL.png)
 
@@ -74,7 +81,23 @@ LiaScript a été présenté par André Dietrich en [novembre 2019 à la confér
 
 Le texte de la conférence est disponible en ligne [^3]
 
-
+```bibtex @cite
+@book{dietrichLiaScriptDomainspecificlanguageInteractive2019,
+	title = {{LiaScript}: a domain-specific-language for interactive online courses},
+	shorttitle = {{LiaScript}},
+	url = {https://eric.ed.gov/?id=ED621589},
+	abstract = {LiaScript is an attempt to enable everyone to create free and interactive online courses, without the need of being an experienced programmer. Instead, it aims to bring both parties, software- and course-developers, closer together by introducing Open-Source techniques into the Open-courSe development process. LiaScript was designed to be compatible to Common-Markdown, but it introduces lots of language extensions that deal with quizzes, surveys, ASCII-art, text2speech, animations, online programming, the integration of JavaScript, etc. as well as its own macro-system that simplifies tedious and repetitive tasks. It comes along with its own just-in-time compiler that runs in the browser and therefor does not require additional tooling. [For the full proceedings, see ED621557.]},
+	language = {en},
+	urldate = {2025-03-21},
+	institution = {International Association for the Development of the Information Society},
+	author = {Dietrich, André},
+	year = {2019},
+	note = {Publication Title: International Association for Development of the Information Society
+ERIC Number: ED621589},
+	keywords = {LiaScript, REL},
+	file = {Dietrich - 2019 - LiaScript a domain-specific-language for interactive online courses.pdf:/home/dbelveze/OneDrive/Zotero/Obsidian/Dietrich - 2019 - LiaScript a domain-specific-language for interactive online courses.pdf:application/pdf},
+}
+```
 
 
 ### 1.2 Editer un texte pour l'interpréteur Liascript
@@ -310,3 +333,6 @@ A partir de ce moment, chaque fois qu'un participant clique sur le bouton "check
 
 ![](images/classroom.PNG)
 
+# Références
+
+@[bibliography.link](https://github.com/damienbelveze/Liascript/blob/main/biblio.bib)
