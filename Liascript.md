@@ -287,6 +287,22 @@ Parallel 4   :         des6, after des4, 1d
 ```
 @mermaid_eval
 
+### 2.6 Gérer les Références
+
+Les références se gèrent au moyen d'un plugin auquel on fait référence dans l'entête : 
+
+``` text   
+import: https://raw.githubusercontent.com/LiaTemplates/citations/main/README.md
+
+@onload
+// this shall load an entire file at starttime that can be referenced
+setTimeout(() => { window.bibliographyLoad("https://raw.githubusercontent.com/LiaTemplates/citations/main/bibtex.bib")}, 100)
+@end
+
+```
+Voir le [mode d'emploi en ligne](https://liascript.github.io/LiveEditor/?/show/code/H4sIAAAAAAAAA61STYvbMBC961dMt5cEEtlJT126i5dtKJRtKUsupRQiW5NYjSwZaUw2LPnvHclJCb22RgdrPt7Me3of3sznwnS9D3QLLVEfb4siqIPcGWqHeogYGu8IHcnGd8WTUWvseqsIY9EYUmS8i0WnjCueVw8fv6xkp4WovLNeaVEUQK2JEFtlLaQQKAcMZgLC1lgERRBJBSLTIdfyteGKGiHgFgO6BrWISGtO+4Emkync3cMrHIzT/iBrU1vjd0H17fGJ0Sc3/0aB8QhfEuzN9DSDRVlORYVOi/n8Xoi38HguF2KdaPFRcIEQm81m7IeKYyiq2vv96y/fuujdsly8T/eZACBDzDx9d/C6bhEePe+DhPBpMJpl8LB6USkUT6leDdT6cK7/POLNYNUZe8z5I6qczfk0KEf7gbWJLYYUfWiUxs408C1gPKNqnf7Hrq94gO8+7HNmCBb+4F0E1d5IH3bFopQsS1mwpFu5LJcLuVi+O4E4Jf5CSnmtTX7EJjMi5rmzvmYjHLMTUMMol6i4bPKXTlPGmbM1xUVyYDIEjA9b1iK7yhAc/GB1souy0UPvY2RH5HlMjxcYJwK/e6ecnkE07KjUmNazAZU+XjmNbcXADkb3QiZT/bg2mbTG7X9O/pfLpr8Byn2KLX8DAAA=)
+
+
 ## 3. Partager un cours édité avec Liascript 
 
 Lorsqu'on a rédigé un cours sur son éditeur de texte, on peut ensuite l'envoyer sur Github pour le rendre disponible. 
@@ -335,4 +351,4 @@ A partir de ce moment, chaque fois qu'un participant clique sur le bouton "check
 
 # Références
 
-@[bibliography.link](https://github.com/damienbelveze/Liascript/blob/main/biblio.bib)
+@[bibliography.link](https://raw.githubusercontent.com/damienbelveze/Liascript/refs/heads/main/biblio.bib)
